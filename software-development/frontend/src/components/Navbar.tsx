@@ -10,20 +10,20 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full transition-all duration-300 z-10">
-      <div className="flex fixed justify-between items-center h-20 w-full mx-auto px-8 text-black bg-white shadow-md">
+    <nav className="fixed h-20 top-0 w-full transition-all duration-300 z-10">
+      <div className="flex h-full lg:max-w-[75%] relative justify-between items-center w-full mx-auto px-8 text-black">
         <div className="flex h-full items-center">
           <img
             src={logo}
             alt="superset brand logo"
             className=" h-[45%] object-contain mr-4"
           />
-          <h1 className="w-auto text-3xl font-bold mr-8 tracking-wider">
+          <h1 className="w-auto text-2xl font-bold mr-8 tracking-wider">
             SUPERSET
           </h1>
         </div>
         <button className="hidden btn primary-colour-bg sm:flex sm:text-xl">
-          LOGIN
+          Login
         </button>
         <div onClick={handleNav} className="flex left-[90%] sm:hidden ml-8">
           <AiOutlineMenu
