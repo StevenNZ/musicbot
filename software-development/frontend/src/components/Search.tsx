@@ -59,7 +59,7 @@ const Search: React.FC<CategoriesProps> = ({
         <div className="flex justify-center">
           <input
             type="text"
-            className="block w-8/12 max-w-[1000px] p-4 text-gray-900 border border-gray-300 rounded-xl bg-gray-50 rounded-r-none"
+            className="block w-9/12 max-w-[860px] p-4 text-gray-900 border border-gray-300 rounded-xl bg-gray-50 rounded-r-none"
             placeholder="Search an exercise or muscle"
             value={search}
             onChange={(value) => {

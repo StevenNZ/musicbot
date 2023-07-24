@@ -17,7 +17,7 @@ const Categories: React.FC<CategoriesProps> = ({
   const { containerRef, handleScrollLeft, handleScrollRight } =
     useHorizontalScroll();
   return (
-    <div className="flex items-center mt-4 mx-auto max-w-[1000px]">
+    <div className="flex items-center mt-4 mx-auto max-w-[1013px]">
       <div>
         <AiOutlineDoubleLeft
           size={60}
