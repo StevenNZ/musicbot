@@ -6,6 +6,10 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  background: #d5e3ff;
+}
+
 .primary-colour-bg {
   @apply bg-[#FC7676];
   @apply text-black;
@@ -20,4 +24,30 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 95% 100%;
+}
+
+.hover-category {
+  @apply cursor-pointer hover:scale-110 transition-all duration-500;
+}
+
+.scrollbar-arrow {
+  @apply p-2 hover:scale-125;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
