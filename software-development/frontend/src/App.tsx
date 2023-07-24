@@ -5,12 +5,19 @@ import Navbar from "./components/Navbar";
 import Search from "./components/Search";
 import Exercises from "./components/Exercises";
 
+export interface exerciseProps {
+  bodyPart: string;
+  equipment: string;
+  name: string;
+  target: string;
+}
+
 function App() {
-  const [exercises, setExercises] = useState<string[]>([]);
+  const [exercises, setExercises] = useState<exerciseProps[]>([]);
   const [bodyPart, setBodyPart] = useState<string>("");
 
   return (
-    <div className="App">
+    <div className="App pb-40">
       <Navbar />
       <Hero />
       <Search
@@ -18,7 +25,11 @@ function App() {
         bodyPart={bodyPart}
         setBodyPart={setBodyPart}
       />
-      <Exercises />
+      <Exercises
+        exercises={exercises}
+        setExercises={setExercises}
+        bodyPart={bodyPart}
+      />
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { exerciseOptions, fetchExercise } from "../api/fetchExercise";
 import Categories from "./Categories";
+import { exerciseProps } from "../App";
 
 interface CategoriesProps {
-  setExercises: React.Dispatch<React.SetStateAction<string[]>>;
+  setExercises: React.Dispatch<React.SetStateAction<exerciseProps[]>>;
   bodyPart: string;
   setBodyPart: React.Dispatch<React.SetStateAction<string>>;
 }

@@ -15,7 +15,7 @@ const BodyPart: React.FC<CategoriesProps> = ({
   return (
     <div
       className={`w-[150px] h-[150px] my-14 mx-3 flex justify-center bg-[#ebf1ff] rounded-3xl hover-category ${
-        item === bodyPart ? "bg-[#a5c2ff]" : ""
+        item === bodyPart ? "bg-[#a4c0fd]" : ""
       }`}
       onClick={() => setBodyPart(item)}
     >
