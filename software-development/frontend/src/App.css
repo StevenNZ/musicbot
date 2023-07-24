@@ -31,7 +31,7 @@ button {
 }
 
 .scrollbar-arrow {
-  @apply p-2 hover:scale-125;
+  @apply p-2 hover:scale-125 w-9 sm:w-auto;
 }
 
 ::-webkit-scrollbar {

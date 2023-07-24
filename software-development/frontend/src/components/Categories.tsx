@@ -18,10 +18,10 @@ const Categories: React.FC<CategoriesProps> = ({
     useHorizontalScroll();
   return (
     <div className="flex items-center mt-4 mx-auto max-w-[1013px]">
-      <div>
+      <div className=" ">
         <AiOutlineDoubleLeft
           size={60}
-          className="scrollbar-arrow mr-3 hover-category"
+          className="scrollbar-arrow sm:mr-3 hover-category"
           onClick={handleScrollLeft}
         />
       </div>
@@ -43,7 +43,7 @@ const Categories: React.FC<CategoriesProps> = ({
       <div>
         <AiOutlineDoubleRight
           size={60}
-          className="scrollbar-arrow ml-3 hover-category"
+          className="scrollbar-arrow sm:ml-3 hover-category"
           onClick={handleScrollRight}
         />
       </div>
