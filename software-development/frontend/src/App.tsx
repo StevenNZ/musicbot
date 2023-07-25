@@ -8,6 +8,8 @@ import Exercises from "./components/Exercises";
 export interface exerciseProps {
   bodyPart: string;
   equipment: string;
+  gifUrl: string;
+  id: string;
   name: string;
   target: string;
 }

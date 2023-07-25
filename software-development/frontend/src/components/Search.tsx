@@ -24,7 +24,7 @@ const Search: React.FC<CategoriesProps> = ({
         exerciseOptions
       );
 
-      setBodyParts([...bodyPartsData]);
+      setBodyParts(["all", ...bodyPartsData]);
     };
 
     fetchBodyPartsData();
