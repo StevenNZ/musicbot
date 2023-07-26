@@ -51,6 +51,12 @@ const Search: React.FC<CategoriesProps> = ({
     }
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
+
   return (
     <section className="py-20">
       <div className="w-10/12 lg:w-3/4 mx-auto">
@@ -66,6 +72,7 @@ const Search: React.FC<CategoriesProps> = ({
             onChange={(value) => {
               setSearch(value.target.value);
             }}
+            onKeyDown={handleKeyDown}
           ></input>
           <button
             className="primary-colour-bg rounded-l-none lg:px-12"
