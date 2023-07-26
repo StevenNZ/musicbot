@@ -31,7 +31,7 @@ const Exercises: React.FC<CategoriesProps> = ({
     const fetchExercisesData = async () => {
       let exercises = [];
 
-      if (bodyPart === "all") {
+      if (bodyPart === "all" || bodyPart === "") {
         exercises = await fetchExercise(
           "https://exercisedb.p.rapidapi.com/exercises",
           exerciseOptions
@@ -42,6 +42,8 @@ const Exercises: React.FC<CategoriesProps> = ({
           exerciseOptions
         );
       }
+
+      setExercises(exercises);
     };
     fetchExercisesData();
   }, [bodyPart]);
