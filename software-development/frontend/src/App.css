@@ -35,7 +35,7 @@ button {
 }
 
 .tag {
-  @apply rounded-3xl w-fit h-fit py-3 px-5 text-sm sm:text-base text-white font-semibold capitalize;
+  @apply rounded-3xl w-fit h-fit py-3 px-4 text-sm sm:text-base text-white font-semibold capitalize;
 }
 
 ::-webkit-scrollbar {
