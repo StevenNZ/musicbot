@@ -1,5 +1,6 @@
 import React from "react";
 import { exerciseProps } from "../Home";
+import { Link } from "react-router-dom";
 
 interface CategoriesProps {
   exercise: exerciseProps;
@@ -7,7 +8,11 @@ interface CategoriesProps {
 
 const ExerciseCard: React.FC<CategoriesProps> = ({ exercise }) => {
   return (
-    <div className="w-11/12 p-5 aspect-square md:mb-8 md:h-fit bg-[#ebf1ff] rounded-3xl hover-category">
+    <Link
+      to={`/exercise/${exercise.id}`}
+      className="w-11/12 p-5 aspect-square md:mb-8 md:h-fit bg-[#ebf1ff] rounded-3xl hover-category"
+      target="_blank"
+    >
       <div className="mx-auto">
         <img
           src={exercise.gifUrl}
@@ -22,7 +27,7 @@ const ExerciseCard: React.FC<CategoriesProps> = ({ exercise }) => {
           {exercise.name}
         </h2>
       </div>
-    </div>
+    </Link>
   );
 };
 
