@@ -1,5 +1,5 @@
 import React from "react";
-import { exerciseProps } from "../App";
+import { exerciseProps } from "../Home";
 
 interface CategoriesProps {
   exercise: exerciseProps;

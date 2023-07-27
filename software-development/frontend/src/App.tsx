@@ -1,37 +1,17 @@
 import "./App.css";
-import { useState } from "react";
-import Hero from "./components/Hero";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Search from "./components/Search";
-import Exercises from "./components/Exercises";
-
-export interface exerciseProps {
-  bodyPart: string;
-  equipment: string;
-  gifUrl: string;
-  id: string;
-  name: string;
-  target: string;
-}
+import Home from "./Home";
+import ExerciseDetail from "./ExerciseDetail";
 
 function App() {
-  const [exercises, setExercises] = useState<exerciseProps[]>([]);
-  const [bodyPart, setBodyPart] = useState<string>("");
-
   return (
     <div className="App pb-40">
       <Navbar />
-      <Hero />
-      <Search
-        setExercises={setExercises}
-        bodyPart={bodyPart}
-        setBodyPart={setBodyPart}
-      />
-      <Exercises
-        exercises={exercises}
-        setExercises={setExercises}
-        bodyPart={bodyPart}
-      />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/exercise/:id" element={<ExerciseDetail />} />
+      </Routes>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { exerciseOptions, fetchExercise } from "../api/fetchExercise";
 import Categories from "./Categories";
-import { exerciseProps } from "../App";
+import { exerciseProps } from "../Home";
 
 interface CategoriesProps {
   setExercises: React.Dispatch<React.SetStateAction<exerciseProps[]>>;

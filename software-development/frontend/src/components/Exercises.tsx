@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { exerciseOptions, fetchExercise } from "../api/fetchExercise";
-import { exerciseProps } from "../App";
+import { exerciseProps } from "../Home";
 import ExerciseCard from "./ExerciseCard";
 import { Pagination } from "@mui/material";
 
