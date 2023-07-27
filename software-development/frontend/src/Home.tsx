@@ -18,7 +18,7 @@ const Home = () => {
   const [bodyPart, setBodyPart] = useState<string>("");
 
   return (
-    <div>
+    <div className="pb-40">
       <Hero />
       <Search
         setExercises={setExercises}

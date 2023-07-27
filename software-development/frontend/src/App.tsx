@@ -6,7 +6,7 @@ import ExerciseDetail from "./ExerciseDetail";
 
 function App() {
   return (
-    <div className="App pb-40">
+    <div className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
