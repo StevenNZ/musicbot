@@ -1,16 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import logo from "../assets/weblogo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setVisible(prevScrollPos > currentScrollPos);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
+
   return (
-    <nav className="fixed h-20 top-0 w-full transition-all duration-300 z-10">
+    <nav
+      className={`fixed h-20 top-0 w-full bg-[#6E47AE] transition-all duration-300 z-10 shadow-lg ${
+        visible
+          ? "opacity-100"
+          : "opacity-0 -translate-y-full pointer-events-none"
+      }`}
+    >
       <div className="flex h-full lg:max-w-[75%] relative justify-between items-center w-full mx-auto px-8 text-black">
         <div className="flex h-full items-center">
           <img
@@ -22,9 +44,12 @@ const Navbar = () => {
             SUPERSET
           </h1>
         </div>
-        <button className="hidden btn primary-colour-bg sm:flex sm:text-xl">
-          Login
-        </button>
+        <Link to={"/login"} target="_blank">
+          <button className="hidden btn primary-colour-bg sm:flex sm:text-xl">
+            Login
+          </button>
+        </Link>
+
         <div onClick={handleNav} className="flex left-[90%] sm:hidden ml-8">
           <AiOutlineMenu
             size={30}

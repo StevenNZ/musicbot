@@ -6,13 +6,17 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  background: #d5e3ff;
+}
+
 .primary-colour-bg {
   @apply bg-[#FC7676];
   @apply text-black;
 }
 
 button {
-  @apply font-bold py-3 px-5 rounded-2xl tracking-wider;
+  @apply font-bold py-3 px-5 rounded-xl tracking-wider;
 }
 
 .banner-image {
@@ -20,4 +24,34 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 95% 100%;
+}
+
+.hover-category {
+  @apply cursor-pointer hover:scale-110 transition-all duration-500;
+}
+
+.scrollbar-arrow {
+  @apply p-2 hover:scale-125 w-9 sm:w-auto;
+}
+
+.tag {
+  @apply rounded-3xl w-fit h-fit py-3 px-4 text-sm sm:text-base text-white font-semibold capitalize;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
