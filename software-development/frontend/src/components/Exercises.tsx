@@ -62,7 +62,7 @@ const Exercises: React.FC<CategoriesProps> = ({
             color="primary"
             boundaryCount={1}
             siblingCount={0}
-            count={Math.ceil(exercises.length)}
+            count={Math.ceil(exercises.length / exerciseLimit)}
             page={currentPage}
             onChange={paginate}
           />

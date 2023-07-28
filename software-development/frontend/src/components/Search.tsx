@@ -68,6 +68,7 @@ const Search: React.FC<CategoriesProps> = ({
             type="text"
             className="block w-9/12 max-w-[860px] p-4 text-gray-900 border border-gray-300 rounded-xl bg-gray-50 rounded-r-none"
             placeholder="Search an exercise or muscle"
+            required={true}
             value={search}
             onChange={(value) => {
               setSearch(value.target.value);

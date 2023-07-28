@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import logo from "../assets/weblogo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
@@ -43,9 +44,12 @@ const Navbar = () => {
             SUPERSET
           </h1>
         </div>
-        <button className="hidden btn primary-colour-bg sm:flex sm:text-xl">
-          Login
-        </button>
+        <Link to={"/login"} target="_blank">
+          <button className="hidden btn primary-colour-bg sm:flex sm:text-xl">
+            Login
+          </button>
+        </Link>
+
         <div onClick={handleNav} className="flex left-[90%] sm:hidden ml-8">
           <AiOutlineMenu
             size={30}
